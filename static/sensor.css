@@ -1,0 +1,56 @@
+.sensors {
+    display: flex;
+    flex-flow: row wrap;
+    margin: auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sensor {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    margin: 1em;
+    padding: 6px;
+}
+
+
+.sensor-name {
+    grid-row: 1;
+}
+
+.sensor-entries {
+    grid-row: 2;
+}
+
+.entry {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 1em;
+    align-items: center;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.entry-label {
+    grid-column: 1;
+}
+.entry-data {
+    grid-column: 2;
+}
+
+.metadata {
+    color: var(--nord5)
+}
+
+@media only screen and (max-width: 600px) {
+    .metadata {
+        display: none;
+    }
+}
+
+.temp-warning {
+    background: var(--nord11);
+}
